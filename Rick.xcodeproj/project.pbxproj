@@ -15,7 +15,6 @@
 		D03543322C4552CE00B7B3EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D03543312C4552CE00B7B3EB /* Preview Assets.xcassets */; };
 		D03543392C456E5800B7B3EB /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03543382C456E5800B7B3EB /* CardDetailView.swift */; };
 		D035433B2C4581A900B7B3EB /* CardSupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035433A2C4581A900B7B3EB /* CardSupportView.swift */; };
-		D035433D2C469A0700B7B3EB /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035433C2C469A0700B7B3EB /* TabBarView.swift */; };
 		D0F917DE2C47EC8A00D47245 /* IBMPlexSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0F917DD2C47EC8A00D47245 /* IBMPlexSans-Medium.ttf */; };
 		D0F917E02C47ECA800D47245 /* IBMPlexSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0F917DF2C47ECA800D47245 /* IBMPlexSans-Bold.ttf */; };
 		D0F917E22C47ECCD00D47245 /* IBMPlexSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0F917E12C47ECCD00D47245 /* IBMPlexSans-SemiBold.ttf */; };
@@ -33,7 +32,6 @@
 		D03543312C4552CE00B7B3EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D03543382C456E5800B7B3EB /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
 		D035433A2C4581A900B7B3EB /* CardSupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSupportView.swift; sourceTree = "<group>"; };
-		D035433C2C469A0700B7B3EB /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		D0F917DA2C47E94900D47245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0F917DD2C47EC8A00D47245 /* IBMPlexSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Medium.ttf"; sourceTree = "<group>"; };
 		D0F917DF2C47ECA800D47245 /* IBMPlexSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 				D035432C2C4552C900B7B3EB /* CardView.swift */,
 				D035433A2C4581A900B7B3EB /* CardSupportView.swift */,
 				D03543382C456E5800B7B3EB /* CardDetailView.swift */,
-				D035433C2C469A0700B7B3EB /* TabBarView.swift */,
 				D0F917E52C47F0F300D47245 /* RickAndMortyAPIResponse.swift */,
 				D00995292C4803DF002277C4 /* RickAndMortyAPI.swift */,
 				D009952B2C480526002277C4 /* RickAndMortyViewModel.swift */,
@@ -194,7 +191,6 @@
 				D009952C2C480526002277C4 /* RickAndMortyViewModel.swift in Sources */,
 				D0F917E62C47F0F300D47245 /* RickAndMortyAPIResponse.swift in Sources */,
 				D035433B2C4581A900B7B3EB /* CardSupportView.swift in Sources */,
-				D035433D2C469A0700B7B3EB /* TabBarView.swift in Sources */,
 				D035432B2C4552C900B7B3EB /* RickApp.swift in Sources */,
 				D009952A2C4803DF002277C4 /* RickAndMortyAPI.swift in Sources */,
 			);

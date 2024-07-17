@@ -31,7 +31,6 @@ struct CardView: View {
                 }
                 .padding()
             }
-            .navigationTitle("Characters")
             .onAppear {
                 viewModel.fetchCharacters()
             }
@@ -42,33 +41,8 @@ struct CardView: View {
     }
 }
 
-import SwiftUI
-
-struct ContentView: View {
-    @StateObject private var viewModel = RickAndMortyViewModel()
-
-    var body: some View {
-        NavigationView {
-            List(viewModel.characters) { character in
-                VStack(alignment: .leading) {
-                    Text(character.name)
-                        .font(.headline)
-                    Text(character.status)
-                        .font(.subheadline)
-                }
-            }
-            .navigationTitle("Rick and Morty Characters")
-            .onAppear {
-                viewModel.fetchCharacters()
-            }
-//            .alert(item: $viewModel.errorMessage) { error in
-//                Alert(title: Text("Error"), message: Text(error.message), dismissButton: .default(Text("OK")))
-            }
-        }
-    }
-//}
-
 extension Character: Identifiable {}
+
 #Preview {
     CardView()
 }

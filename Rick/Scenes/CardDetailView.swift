@@ -17,12 +17,16 @@ struct DetailView: View {
         ZStack {
             Color.gray
             VStack {
-                Image("imagetest")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 300, height: 300)
-                    .cornerRadius(10)
-                    .padding()
+                AsyncImage(url: URL(string: imageName)) { image in
+                                        image
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: 100, height: 70)
+                                            .cornerRadius(10)
+                                    } placeholder: {
+                                        ProgressView()
+                                            .frame(width: 100, height: 70)
+                                    }
                 
                 Button(action: {
                            print("Button tapped!")
