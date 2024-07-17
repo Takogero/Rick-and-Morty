@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D009952A2C4803DF002277C4 /* RickAndMortyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00995292C4803DF002277C4 /* RickAndMortyAPI.swift */; };
 		D009952C2C480526002277C4 /* RickAndMortyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D009952B2C480526002277C4 /* RickAndMortyViewModel.swift */; };
+		D00995322C481BA5002277C4 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00995312C481BA5002277C4 /* ColorExt.swift */; };
 		D035432B2C4552C900B7B3EB /* RickApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035432A2C4552C900B7B3EB /* RickApp.swift */; };
 		D035432D2C4552C900B7B3EB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035432C2C4552C900B7B3EB /* CardView.swift */; };
 		D035432F2C4552CE00B7B3EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D035432E2C4552CE00B7B3EB /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		D00995292C4803DF002277C4 /* RickAndMortyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyAPI.swift; sourceTree = "<group>"; };
 		D009952B2C480526002277C4 /* RickAndMortyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyViewModel.swift; sourceTree = "<group>"; };
+		D00995312C481BA5002277C4 /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
 		D03543272C4552C900B7B3EB /* Rick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D035432A2C4552C900B7B3EB /* RickApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickApp.swift; sourceTree = "<group>"; };
 		D035432C2C4552C900B7B3EB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				D0F917E52C47F0F300D47245 /* RickAndMortyAPIResponse.swift */,
 				D00995292C4803DF002277C4 /* RickAndMortyAPI.swift */,
 				D009952B2C480526002277C4 /* RickAndMortyViewModel.swift */,
+				D00995312C481BA5002277C4 /* ColorExt.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D03543392C456E5800B7B3EB /* CardDetailView.swift in Sources */,
+				D00995322C481BA5002277C4 /* ColorExt.swift in Sources */,
 				D035432D2C4552C900B7B3EB /* CardView.swift in Sources */,
 				D009952C2C480526002277C4 /* RickAndMortyViewModel.swift in Sources */,
 				D0F917E62C47F0F300D47245 /* RickAndMortyAPIResponse.swift in Sources */,

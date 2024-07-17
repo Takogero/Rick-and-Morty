@@ -21,9 +21,10 @@ struct CardView: View {
             ScrollView(.vertical) {
                 VStack {
                     Text("Rick & Morty Characters")
+                        .foregroundColor(.white)
                         .font(Font.custom("IBMPlexSans-Bold", size: 24))
 
-                    LazyVGrid(columns: columns, spacing: 10) {
+                    LazyVGrid(columns: columns, spacing: 5) {
                         ForEach(viewModel.characters) { character in
                             CardSupportView(title: character.name,
                                             subtitle: character.status,
@@ -41,6 +42,7 @@ struct CardView: View {
             .alert(item: $viewModel.errorMessage) { error in
                 Alert(title: Text("Error"), message: Text(error.message), dismissButton: .default(Text("OK")))
             }
+            .background(Color.black)
         }
     }
 }

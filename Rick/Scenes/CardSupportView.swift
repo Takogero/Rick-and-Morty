@@ -13,50 +13,66 @@ struct CardSupportView: View {
     let subtitle2: String
     let subtitle3: String
     let imageName: String
-
+    
     var body: some View {
-        NavigationLink(destination: DetailView(title: title, subtitle: subtitle, subtitle2: subtitle2, imageName: imageName)) {
+        NavigationLink(destination: DetailView(title: title, subtitle: subtitle, subtitle2: subtitle2, subtitle3: subtitle3, imageName: imageName)) {
             ZStack {
-                Color.gray
+                Color(UIColor(hexString: "#151517"))
                 HStack {
                     AsyncImage(url: URL(string: imageName)) { image in
-                                            image
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fill)
-                                                .frame(width: 100, height: 70)
-                                                .cornerRadius(10)
-                                        } placeholder: {
-                                            ProgressView()
-                                                .frame(width: 100, height: 70)
-                                        }
-                                        .padding(.leading, 10)
-
-                    VStack(alignment: .leading, spacing: 10) {
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 84, height: 64)
+                            .cornerRadius(10)
+                    } placeholder: {
+                        ProgressView()
+                            .frame(width: 100, height: 70)
+                    }
+                    .padding(.leading, 10)
+                    
+                    VStack(alignment: .leading, spacing: 5) {
                         Text(title)
-                            .font(.headline)
+                            .font(Font.custom("IBMPlexSans-Medium", size: 18))
                             .foregroundColor(.white)
                         
-                        Text(subtitle)
-                            .font(.subheadline)
-                            .foregroundColor(.white)
-                        +
-                        Text(" • ")
-                        +
-                        Text(subtitle2)
-                            .font(.subheadline)
-                            .foregroundColor(.white)
+                        HStack {
+                            Text(subtitle)
+                                .font(Font.custom("IBMPlexSans-SemiBold", size: 12))
+                                .foregroundColor(statusColor(for: subtitle))
+                            +
+                            Text(" • ")
+                                .font(Font.custom("IBMPlexSans-SemiBold", size: 12))
+                                .foregroundColor(.white)
+                            +
+                            Text(subtitle2)
+                                .font(Font.custom("IBMPlexSans-SemiBold", size: 12))
+                                .foregroundColor(.white)
+                        }
                         
                         Text(subtitle3)
+                            .font(Font.custom("IBMPlexSans-Regular", size: 12))
                             .foregroundColor(.white)
-                        
+                            .padding(.top, 5)
                     }
                     .padding()
-
+                    
                     Spacer()
                 }
             }
-            .frame(width: 350, height: 100)
-            .cornerRadius(15)
+            .frame(width: 353, height: 96)
+            .cornerRadius(24)
+        }
+    }
+    
+    func statusColor(for status: String) -> Color {
+        switch status.lowercased() {
+        case "alive":
+            return .green
+        case "dead":
+            return .red
+        default:
+            return .gray
         }
     }
 }
