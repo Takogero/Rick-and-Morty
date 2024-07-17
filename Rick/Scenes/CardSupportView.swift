@@ -18,12 +18,17 @@ struct CardSupportView: View {
             ZStack {
                 Color.gray
                 HStack {
-                    Image("imagetest")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 100, height: 70)
-                        .cornerRadius(10)
-                        .padding(.leading, 8)
+                    AsyncImage(url: URL(string: imageName)) { image in
+                                            image
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fill)
+                                                .frame(width: 100, height: 70)
+                                                .cornerRadius(10)
+                                        } placeholder: {
+                                            ProgressView()
+                                                .frame(width: 100, height: 70)
+                                        }
+                                        .padding(.leading, 10)
 
                     VStack(alignment: .leading, spacing: 10) {
                         Text(title)
