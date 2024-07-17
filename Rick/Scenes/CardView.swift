@@ -25,7 +25,11 @@ struct CardView: View {
 
                     LazyVGrid(columns: columns, spacing: 10) {
                         ForEach(viewModel.characters) { character in
-                            CardSupportView(title: character.name, subtitle: character.status, subtitle2: character.species, imageName: character.image)
+                            CardSupportView(title: character.name,
+                                            subtitle: character.status,
+                                            subtitle2: character.species,
+                                            subtitle3: character.gender,
+                                            imageName: character.image)
                         }
                     }
                 }

@@ -11,6 +11,7 @@ struct CardSupportView: View {
     let title: String
     let subtitle: String
     let subtitle2: String
+    let subtitle3: String
     let imageName: String
 
     var body: some View {
@@ -34,12 +35,20 @@ struct CardSupportView: View {
                         Text(title)
                             .font(.headline)
                             .foregroundColor(.white)
+                        
                         Text(subtitle)
                             .font(.subheadline)
                             .foregroundColor(.white)
+                        +
+                        Text(" • ")
+                        +
                         Text(subtitle2)
                             .font(.subheadline)
                             .foregroundColor(.white)
+                        
+                        Text(subtitle3)
+                            .foregroundColor(.white)
+                        
                     }
                     .padding()
 
@@ -54,6 +63,6 @@ struct CardSupportView: View {
 
 #Preview {
     NavigationView {
-        CardSupportView(title: "Preview Title", subtitle: "Preview Subtitle", subtitle2: "Preview Subtitle 2", imageName: "Preview Image Name")
+        CardSupportView(title: "Preview Title", subtitle: "Preview Subtitle", subtitle2: "Preview Subtitle 2", subtitle3: "Preview Subtitle 3", imageName: "Preview Image Name")
     }
 }
