@@ -8,17 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		D035432B2C4552C900B7B3EB /* RickApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035432A2C4552C900B7B3EB /* RickApp.swift */; };
-		D035432D2C4552C900B7B3EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035432C2C4552C900B7B3EB /* ContentView.swift */; };
+		D035432D2C4552C900B7B3EB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035432C2C4552C900B7B3EB /* CardView.swift */; };
 		D035432F2C4552CE00B7B3EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D035432E2C4552CE00B7B3EB /* Assets.xcassets */; };
 		D03543322C4552CE00B7B3EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D03543312C4552CE00B7B3EB /* Preview Assets.xcassets */; };
+		D03543392C456E5800B7B3EB /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03543382C456E5800B7B3EB /* CardDetailView.swift */; };
+		D035433B2C4581A900B7B3EB /* CardSupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035433A2C4581A900B7B3EB /* CardSupportView.swift */; };
+		D035433D2C469A0700B7B3EB /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035433C2C469A0700B7B3EB /* TabBarView.swift */; };
+		D0F917DE2C47EC8A00D47245 /* IBMPlexSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0F917DD2C47EC8A00D47245 /* IBMPlexSans-Medium.ttf */; };
+		D0F917E02C47ECA800D47245 /* IBMPlexSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0F917DF2C47ECA800D47245 /* IBMPlexSans-Bold.ttf */; };
+		D0F917E22C47ECCD00D47245 /* IBMPlexSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0F917E12C47ECCD00D47245 /* IBMPlexSans-SemiBold.ttf */; };
+		D0F917E42C47ECF000D47245 /* IBMPlexSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0F917E32C47ECF000D47245 /* IBMPlexSans-Regular.ttf */; };
+		D0F917E62C47F0F300D47245 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F917E52C47F0F300D47245 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D03543272C4552C900B7B3EB /* Rick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D035432A2C4552C900B7B3EB /* RickApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickApp.swift; sourceTree = "<group>"; };
-		D035432C2C4552C900B7B3EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D035432C2C4552C900B7B3EB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D035432E2C4552CE00B7B3EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D03543312C4552CE00B7B3EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D03543382C456E5800B7B3EB /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
+		D035433A2C4581A900B7B3EB /* CardSupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSupportView.swift; sourceTree = "<group>"; };
+		D035433C2C469A0700B7B3EB /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		D0F917DA2C47E94900D47245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0F917DD2C47EC8A00D47245 /* IBMPlexSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Medium.ttf"; sourceTree = "<group>"; };
+		D0F917DF2C47ECA800D47245 /* IBMPlexSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Bold.ttf"; sourceTree = "<group>"; };
+		D0F917E12C47ECCD00D47245 /* IBMPlexSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		D0F917E32C47ECF000D47245 /* IBMPlexSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Regular.ttf"; sourceTree = "<group>"; };
+		D0F917E52C47F0F300D47245 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +69,9 @@
 			isa = PBXGroup;
 			children = (
 				D035432A2C4552C900B7B3EB /* RickApp.swift */,
-				D035432C2C4552C900B7B3EB /* ContentView.swift */,
-				D035432E2C4552CE00B7B3EB /* Assets.xcassets */,
+				D0F917DA2C47E94900D47245 /* Info.plist */,
+				D035433E2C46A2F100B7B3EB /* Scenes */,
+				D0F917D72C47E6C300D47245 /* Fonts */,
 				D03543302C4552CE00B7B3EB /* Preview Content */,
 			);
 			path = Rick;
@@ -62,9 +80,33 @@
 		D03543302C4552CE00B7B3EB /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				D035432E2C4552CE00B7B3EB /* Assets.xcassets */,
 				D03543312C4552CE00B7B3EB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D035433E2C46A2F100B7B3EB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D035432C2C4552C900B7B3EB /* CardView.swift */,
+				D035433A2C4581A900B7B3EB /* CardSupportView.swift */,
+				D03543382C456E5800B7B3EB /* CardDetailView.swift */,
+				D035433C2C469A0700B7B3EB /* TabBarView.swift */,
+				D0F917E52C47F0F300D47245 /* SwiftUIView.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D0F917D72C47E6C300D47245 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D0F917DD2C47EC8A00D47245 /* IBMPlexSans-Medium.ttf */,
+				D0F917DF2C47ECA800D47245 /* IBMPlexSans-Bold.ttf */,
+				D0F917E12C47ECCD00D47245 /* IBMPlexSans-SemiBold.ttf */,
+				D0F917E32C47ECF000D47245 /* IBMPlexSans-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +168,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D03543322C4552CE00B7B3EB /* Preview Assets.xcassets in Resources */,
+				D0F917E02C47ECA800D47245 /* IBMPlexSans-Bold.ttf in Resources */,
+				D0F917E42C47ECF000D47245 /* IBMPlexSans-Regular.ttf in Resources */,
 				D035432F2C4552CE00B7B3EB /* Assets.xcassets in Resources */,
+				D0F917DE2C47EC8A00D47245 /* IBMPlexSans-Medium.ttf in Resources */,
+				D0F917E22C47ECCD00D47245 /* IBMPlexSans-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +183,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D035432D2C4552C900B7B3EB /* ContentView.swift in Sources */,
+				D03543392C456E5800B7B3EB /* CardDetailView.swift in Sources */,
+				D035432D2C4552C900B7B3EB /* CardView.swift in Sources */,
+				D0F917E62C47F0F300D47245 /* SwiftUIView.swift in Sources */,
+				D035433B2C4581A900B7B3EB /* CardSupportView.swift in Sources */,
+				D035433D2C469A0700B7B3EB /* TabBarView.swift in Sources */,
 				D035432B2C4552C900B7B3EB /* RickApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +324,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Rick/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Rick/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -302,6 +353,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Rick/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Rick/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
