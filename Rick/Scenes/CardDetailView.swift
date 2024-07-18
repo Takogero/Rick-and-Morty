@@ -14,6 +14,28 @@ struct DetailView: View {
     let subtitle3: String
     let imageName: String
     
+    var buttonColor: Color {
+        switch subtitle.lowercased() {
+        case "alive":
+            return Color(UIColor(hexString: "#198737"))
+        case "dead":
+            return Color(UIColor(hexString: "#D62300"))
+        default:
+            return Color(UIColor(hexString: "#686874"))
+        }
+    }
+    
+    var buttonText: String {
+        switch subtitle.lowercased() {
+        case "alive":
+            return "Alive"
+        case "dead":
+            return "Dead"
+        default:
+            return "Unknown"
+        }
+    }
+    
     var body: some View {
         ZStack {
             Color.gray
@@ -32,13 +54,12 @@ struct DetailView: View {
                 Button(action: {
                     print("Button tapped!")
                 }) {
-                    Text("Нажми меня")
+                    Text(buttonText)
                         .padding()
                         .frame(width: 320, height: 42)
-                        .background(Color.blue)
+                        .background(buttonColor)
                         .foregroundColor(.white)
                         .cornerRadius(10)
-                    
                 }
                 
                 VStack(alignment: .leading, spacing: 10) {
@@ -47,7 +68,7 @@ struct DetailView: View {
                         .font(Font.custom("IBMPlexSans-SemiBold", size: 16))
                         .foregroundColor(.white)
                     +
-                    Text(title)
+                    Text(subtitle2)
                         .font(Font.custom("IBMPlexSans-Regular", size: 16))
                         .foregroundColor(.white)
                     
@@ -55,7 +76,15 @@ struct DetailView: View {
                         .font(Font.custom("IBMPlexSans-SemiBold", size: 16))
                         .foregroundColor(.white)
                     +
-                    Text(title)
+                    Text(subtitle3)
+                        .font(Font.custom("IBMPlexSans-Regular", size: 16))
+                        .foregroundColor(.white)
+                    
+                    Text("Status: ")
+                        .font(Font.custom("IBMPlexSans-SemiBold", size: 16))
+                        .foregroundColor(.white)
+                    +
+                    Text(subtitle)
                         .font(Font.custom("IBMPlexSans-Regular", size: 16))
                         .foregroundColor(.white)
                     
@@ -74,7 +103,6 @@ struct DetailView: View {
                     Text(title)
                         .font(Font.custom("IBMPlexSans-Regular", size: 16))
                         .foregroundColor(.white)
-                    
                 }
                 .padding()
             }
