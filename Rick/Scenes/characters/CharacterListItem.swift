@@ -8,19 +8,15 @@
 import SwiftUI
 
 struct CharacterListItem: View {
-    let title: String
-    let subtitle: String
-    let subtitle2: String
-    let subtitle3: String
-    let imageName: String
+    let character: CharacterResponse
     
     var body: some View {
-        NavigationLink(destination: CharacterDetailsView(title: title, subtitle: subtitle, subtitle2: subtitle2, subtitle3: subtitle3, imageName: imageName)) {
+        NavigationLink(destination: CharacterDetailsView(characterId: character.id)) {
             
             ZStack {
                 Color(UIColor(hexString: "#151517"))
                 HStack {
-                    AsyncImage(url: URL(string: imageName)) { image in
+                    AsyncImage(url: URL(string: character.image)) { image in
                         image
                             .resizable()
                             .aspectRatio(contentMode: .fill)
@@ -33,25 +29,25 @@ struct CharacterListItem: View {
                     .padding(.leading, 10)
                     
                     VStack(alignment: .leading, spacing: 5) {
-                        Text(title)
+                        Text(character.name)
                             .font(Font.custom("IBMPlexSans-Medium", size: 18))
                             .foregroundColor(.white)
                         
                         HStack {
-                            Text(subtitle)
+                            Text(character.status)
                                 .font(Font.custom("IBMPlexSans-SemiBold", size: 12))
-                                .foregroundColor(statusColor(for: subtitle))
+                                .foregroundColor(statusColor(for: character.status))
                             +
                             Text(" • ")
                                 .font(Font.custom("IBMPlexSans-SemiBold", size: 12))
                                 .foregroundColor(.white)
                             +
-                            Text(subtitle2)
+                            Text(character.species)
                                 .font(Font.custom("IBMPlexSans-SemiBold", size: 12))
                                 .foregroundColor(.white)
                         }
                         
-                        Text(subtitle3)
+                        Text(character.gender)
                             .font(Font.custom("IBMPlexSans-Regular", size: 12))
                             .foregroundColor(.white)
                             .padding(.top, 5)
@@ -77,9 +73,9 @@ struct CharacterListItem: View {
         }
     }
 }
-
-#Preview {
-    NavigationView {
-        CharacterListItem(title: "Preview Title", subtitle: "Preview Subtitle", subtitle2: "Preview Subtitle 2", subtitle3: "Preview Subtitle 3", imageName: "Preview Image Name")
-    }
-}
+//
+//#Preview {
+//    NavigationView {
+//        CharacterListItem()
+//    }
+//}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1438E0AA-C3D5-420C-91C1-E26145ED8032"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A826F1A-A474-4CD0-B042-AA7097076607"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rick/Scenes/characters/CharacterListItem.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "1A826F1A-A474-4CD0-B042-AA7097076607 - 2c0410fe521ab5fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Rick.CharacterListItem.body.getter : some"
+                  moduleName = "Rick"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookair/Desktop/Rick/Rick/Scenes/characters/CharacterListItem.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "548">
+               </Location>
+               <Location
+                  uuid = "1A826F1A-A474-4CD0-B042-AA7097076607 - 8f963d934fccebaa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0 in Rick.CharacterListItem.body.getter : some"
+                  moduleName = "Rick"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookair/Desktop/Rick/Rick/Scenes/characters/CharacterListItem.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "640">
+               </Location>
+               <Location
+                  uuid = "1A826F1A-A474-4CD0-B042-AA7097076607 - 2c0410fe521ab5fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Rick.CharacterListItem.body.getter : some"
+                  moduleName = "Rick"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookair/Desktop/Rick/Rick/Scenes/characters/CharacterListItem.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "556">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

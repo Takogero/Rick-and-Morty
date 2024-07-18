@@ -1,15 +1,8 @@
-//
-//  23232.swift
-//  Rick
-//
-//  Created by MacBookAir on 17.07.2024.
-//
-
 import Foundation
 import Combine
 
-class CharacterViewModel: ObservableObject {
-    @Published var characters: [Character] = []
+class CharactersViewModel: ObservableObject {
+    @Published var characters: [CharacterResponse] = []
     @Published var errorMessage: IdentifiableError? = nil
 
     private var api = RickAndMortyAPI()

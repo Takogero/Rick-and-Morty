@@ -7,13 +7,8 @@
 
 import SwiftUI
 
-struct IdentifiableError: Identifiable {
-    let id = UUID()
-    let message: String
-}
-
 struct CharactersView: View {
-    @StateObject private var viewModel = CharacterViewModel()
+    @StateObject private var viewModel = CharactersViewModel()
     let columns = [GridItem(.flexible())]
 
     var body: some View {
@@ -26,11 +21,7 @@ struct CharactersView: View {
 
                     LazyVGrid(columns: columns, spacing: 5) {
                         ForEach(viewModel.characters) { character in
-                            CharacterListItem(title: character.name,
-                                            subtitle: character.status,
-                                            subtitle2: character.species,
-                                            subtitle3: character.gender,
-                                            imageName: character.image)
+                            CharacterListItem(character: character)
                         }
                     }
                 }
@@ -47,7 +38,7 @@ struct CharactersView: View {
     }
 }
 
-extension Character: Identifiable {}
+extension CharacterResponse: Identifiable {}
 
 #Preview {
     CharactersView()
