@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class RickAndMortyViewModel: ObservableObject {
+class CharacterViewModel: ObservableObject {
     @Published var characters: [Character] = []
     @Published var errorMessage: IdentifiableError? = nil
 

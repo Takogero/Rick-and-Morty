@@ -12,8 +12,8 @@ struct IdentifiableError: Identifiable {
     let message: String
 }
 
-struct CardView: View {
-    @StateObject private var viewModel = RickAndMortyViewModel()
+struct CharactersView: View {
+    @StateObject private var viewModel = CharacterViewModel()
     let columns = [GridItem(.flexible())]
 
     var body: some View {
@@ -26,7 +26,7 @@ struct CardView: View {
 
                     LazyVGrid(columns: columns, spacing: 5) {
                         ForEach(viewModel.characters) { character in
-                            CardSupportView(title: character.name,
+                            CharacterListItem(title: character.name,
                                             subtitle: character.status,
                                             subtitle2: character.species,
                                             subtitle3: character.gender,
@@ -50,5 +50,5 @@ struct CardView: View {
 extension Character: Identifiable {}
 
 #Preview {
-    CardView()
+    CharactersView()
 }

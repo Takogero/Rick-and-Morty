@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CardSupportView: View {
+struct CharacterListItem: View {
     let title: String
     let subtitle: String
     let subtitle2: String
@@ -15,8 +15,7 @@ struct CardSupportView: View {
     let imageName: String
     
     var body: some View {
-        NavigationLink(destination: DetailView(title: title, subtitle: subtitle, subtitle2: subtitle2, subtitle3: subtitle3, imageName: imageName)) {
-            
+        NavigationLink(destination: CharacterDetailsView(title: title, subtitle: subtitle, subtitle2: subtitle2, subtitle3: subtitle3, imageName: imageName)) {
             
             ZStack {
                 Color(UIColor(hexString: "#151517"))
@@ -81,6 +80,6 @@ struct CardSupportView: View {
 
 #Preview {
     NavigationView {
-        CardSupportView(title: "Preview Title", subtitle: "Preview Subtitle", subtitle2: "Preview Subtitle 2", subtitle3: "Preview Subtitle 3", imageName: "Preview Image Name")
+        CharacterListItem(title: "Preview Title", subtitle: "Preview Subtitle", subtitle2: "Preview Subtitle 2", subtitle3: "Preview Subtitle 3", imageName: "Preview Image Name")
     }
 }
