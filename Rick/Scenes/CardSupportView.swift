@@ -16,6 +16,8 @@ struct CardSupportView: View {
     
     var body: some View {
         NavigationLink(destination: DetailView(title: title, subtitle: subtitle, subtitle2: subtitle2, subtitle3: subtitle3, imageName: imageName)) {
+            
+            
             ZStack {
                 Color(UIColor(hexString: "#151517"))
                 HStack {
