@@ -43,22 +43,44 @@ struct DetailView: View {
                 
                 VStack(alignment: .leading, spacing: 10) {
                     
+                    Text("Species: ")
+                        .font(Font.custom("IBMPlexSans-SemiBold", size: 16))
+                        .foregroundColor(.white)
+                    +
                     Text(title)
-                        .font(.largeTitle)
-                        .foregroundColor(.black)
-                    Text(subtitle)
-                        .font(.title)
-                        .foregroundColor(.red)
-                    Text(subtitle2)
-                        .font(.title)
-                        .foregroundColor(.red)
-                    Text(subtitle3)
+                        .font(Font.custom("IBMPlexSans-Regular", size: 16))
+                        .foregroundColor(.white)
+                    
+                    Text("Gender: ")
+                        .font(Font.custom("IBMPlexSans-SemiBold", size: 16))
+                        .foregroundColor(.white)
+                    +
+                    Text(title)
+                        .font(Font.custom("IBMPlexSans-Regular", size: 16))
+                        .foregroundColor(.white)
+                    
+                    Text("Episodes: ")
+                        .font(Font.custom("IBMPlexSans-SemiBold", size: 16))
+                        .foregroundColor(.white)
+                    +
+                    Text(title)
+                        .font(Font.custom("IBMPlexSans-Regular", size: 16))
+                        .foregroundColor(.white)
+                    
+                    Text("Last known location: ")
+                        .font(Font.custom("IBMPlexSans-SemiBold", size: 16))
+                        .foregroundColor(.white)
+                    +
+                    Text(title)
+                        .font(Font.custom("IBMPlexSans-Regular", size: 16))
+                        .foregroundColor(.white)
+                    
                 }
                 .padding()
             }
             .navigationBarTitle(title)
         }
-        .frame(width: 350, height: 600)
+        .frame(width: 353, height: 534)
         .cornerRadius(15)
     }
 }
