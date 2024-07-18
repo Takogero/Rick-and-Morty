@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Rick
-//
-//  Created by MacBookAir on 15.07.2024.
-//
-
 import SwiftUI
 
 struct CharactersView: View {

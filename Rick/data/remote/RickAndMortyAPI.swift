@@ -3,24 +3,24 @@ import Combine
 
 class RickAndMortyAPI {
     let baseURL = "https://rickandmortyapi.com/api/"
-
-
+    
+    
     func fetchCharacters(completion: @escaping (Result<CharactersAPIResponse, Error>) -> Void) {
         let urlString = "\(baseURL)/character"
         guard let url = URL(string: urlString) else {
             return
         }
-
+        
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
                 completion(.failure(error))
                 return
             }
-
+            
             guard let data = data else {
                 return
             }
-
+            
             do {
                 let decoder = JSONDecoder()
                 let response = try decoder.decode(CharactersAPIResponse.self, from: data)
@@ -29,7 +29,7 @@ class RickAndMortyAPI {
                 completion(.failure(error))
             }
         }
-
+        
         task.resume()
     }
     
@@ -38,7 +38,7 @@ class RickAndMortyAPI {
         guard let url = URL(string: urlString) else {
             return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
         }
-
+        
         return URLSession.shared.dataTaskPublisher(for: url)
             .tryMap { output in
                 guard let httpResponse = output.response as? HTTPURLResponse,
@@ -56,17 +56,17 @@ class RickAndMortyAPI {
         guard let url = URL(string: urlString) else {
             return
         }
-
+        
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
                 completion(.failure(error))
                 return
             }
-
+            
             guard let data = data else {
                 return
             }
-
+            
             do {
                 let decoder = JSONDecoder()
                 let episode = try decoder.decode(EpisodeResponse.self, from: data)
@@ -75,7 +75,29 @@ class RickAndMortyAPI {
                 completion(.failure(error))
             }
         }
-
+        
         task.resume()
+    }
+    
+
+    func fetchEpisode(url: String) -> AnyPublisher<EpisodeResponse, Error> {
+        guard let url = URL(string: url) else {
+            return Fail(error: URLError(.badURL))
+                .eraseToAnyPublisher()
+        }
+        
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .tryMap { data, response in
+                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                    throw URLError(.badServerResponse)
+                }
+                return data
+            }
+            .decode(type: EpisodeResponse.self, decoder: JSONDecoder())
+            .mapError { error -> Error in
+                print("Decoding error: \(error)")
+                return error
+            }
+            .eraseToAnyPublisher()
     }
 }

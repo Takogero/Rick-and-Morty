@@ -83,9 +83,11 @@
 			isa = PBXGroup;
 			children = (
 				D035432A2C4552C900B7B3EB /* RickApp.swift */,
+				D0F71DAB2C494A1F0031B320 /* domain */,
+				D0F71DA02C492F0C0031B320 /* data */,
+				D0F71DB72C4961B20031B320 /* core */,
+				D0F71DB62C49618C0031B320 /* presentation */,
 				D0F917DA2C47E94900D47245 /* Info.plist */,
-				D035433E2C46A2F100B7B3EB /* Scenes */,
-				D0F917D72C47E6C300D47245 /* Fonts */,
 				D03543302C4552CE00B7B3EB /* Preview Content */,
 			);
 			path = Rick;
@@ -98,18 +100,6 @@
 				D03543312C4552CE00B7B3EB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		D035433E2C46A2F100B7B3EB /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				D0F71DAB2C494A1F0031B320 /* domain */,
-				D0F71DA42C492F4C0031B320 /* util */,
-				D0F71DA02C492F0C0031B320 /* data */,
-				D0F71D9F2C492E2E0031B320 /* character_details */,
-				D0F71D9E2C492E130031B320 /* characters */,
-			);
-			path = Scenes;
 			sourceTree = "<group>";
 		};
 		D0F71D9E2C492E130031B320 /* characters */ = {
@@ -197,6 +187,24 @@
 				D0F71DB22C494D4D0031B320 /* IdentifiableError.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		D0F71DB62C49618C0031B320 /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D0F71D9E2C492E130031B320 /* characters */,
+				D0F71D9F2C492E2E0031B320 /* character_details */,
+				D0F71DA42C492F4C0031B320 /* util */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		D0F71DB72C4961B20031B320 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				D0F917D72C47E6C300D47245 /* Fonts */,
+			);
+			path = core;
 			sourceTree = "<group>";
 		};
 		D0F917D72C47E6C300D47245 /* Fonts */ = {

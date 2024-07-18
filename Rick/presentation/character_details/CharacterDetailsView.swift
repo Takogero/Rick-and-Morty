@@ -4,6 +4,7 @@ import Combine
 struct CharacterDetailsView: View {
     let characterId: Int
     @StateObject private var viewModel = CharacterDetailsViewModel()
+    @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
         NavigationView {
@@ -71,7 +72,7 @@ struct CharacterDetailsView: View {
                                             .font(Font.custom("IBMPlexSans-SemiBold", size: 16))
                                             .foregroundColor(.white)
                                         +
-                                        Text(character.episode.joined(separator: ", "))
+                                        Text(character.episodes)
                                             .font(Font.custom("IBMPlexSans-Regular", size: 16))
                                             .foregroundColor(.white)
                                         
@@ -88,7 +89,7 @@ struct CharacterDetailsView: View {
                             )
                     }
                 } else if let error = viewModel.errorMessage {
-                    Text("Error: \(error.localizedDescription)")
+                    Text("Error: \(error.message)")
                         .foregroundColor(.red)
                 } else {
                     ProgressView()
@@ -98,8 +99,12 @@ struct CharacterDetailsView: View {
                 Spacer()
             }
             .navigationBarTitle(viewModel.character?.name ?? "Loading...", displayMode: .inline)
+            .background(NavigationConfigurator { nc in
+                            nc.navigationBar.barTintColor = .blue
+                            nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
+                        })
             .navigationBarItems(leading: Button(action: {
-                print("Back button tapped")
+                self.presentationMode.wrappedValue.dismiss()
             }) {
                 Image(systemName: "arrow.left")
                     .foregroundColor(.white)
@@ -108,9 +113,11 @@ struct CharacterDetailsView: View {
                 viewModel.fetchCharacter(id: characterId)
             }
         }
+        .navigationTitle("Loading...")
+
     }
     
-    func buttonColor(character: CharacterResponse) -> Color {
+    func buttonColor(character: Character) -> Color {
         switch character.status.lowercased() {
         case "alive":
             return Color(UIColor(hexString: "#198737"))
@@ -121,7 +128,7 @@ struct CharacterDetailsView: View {
         }
     }
     
-    func buttonText(character: CharacterResponse) -> String {
+    func buttonText(character: Character) -> String {
         switch character.status.lowercased() {
         case "alive":
             return "Alive"
@@ -129,6 +136,19 @@ struct CharacterDetailsView: View {
             return "Dead"
         default:
             return "Unknown"
+        }
+    }
+}
+
+struct NavigationConfigurator: UIViewControllerRepresentable {
+    var configure: (UINavigationController) -> Void = { _ in }
+
+    func makeUIViewController(context: UIViewControllerRepresentableContext<NavigationConfigurator>) -> UIViewController {
+        UIViewController()
+    }
+    func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<NavigationConfigurator>) {
+        if let nc = uiViewController.navigationController {
+            self.configure(nc)
         }
     }
 }

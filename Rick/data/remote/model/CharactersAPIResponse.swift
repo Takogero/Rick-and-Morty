@@ -1,19 +1,10 @@
-//
-//  SwiftUIView.swift
-//  Rick
-//
-//  Created by MacBookAir on 17.07.2024.
-//
-
 import Foundation
 
-// MARK: - RickAndMortyAPIResponse
 struct CharactersAPIResponse: Codable {
     let info: PagingInfo
     let results: [CharacterResponse]
 }
 
-// MARK: - Info
 struct PagingInfo: Codable {
     let count: Int
     let pages: Int
@@ -21,7 +12,6 @@ struct PagingInfo: Codable {
     let prev: String?
 }
 
-// MARK: - Character
 struct CharacterResponse: Codable {
     let id: Int
     let name: String
@@ -37,7 +27,6 @@ struct CharacterResponse: Codable {
     let created: String
 }
 
-// MARK: - Location
 struct LocationResponse: Codable {
     let name: String
     let url: String

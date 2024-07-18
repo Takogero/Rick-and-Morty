@@ -1,10 +1,3 @@
-//
-//  Character.swift
-//  Rick
-//
-//  Created by MacBookAir on 18.07.2024.
-//
-
 import Foundation
 
 struct Character: Codable {
@@ -17,5 +10,5 @@ struct Character: Codable {
     let origin: LocationResponse
     let location: LocationResponse
     let image: String
-    let episodes: [EpisodeResponse]
+    let episodes: String
 }
