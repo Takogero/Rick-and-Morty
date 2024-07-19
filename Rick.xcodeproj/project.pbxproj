@@ -21,6 +21,7 @@
 		D0F71DAD2C494A360031B320 /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F71DAC2C494A360031B320 /* CharacterRepository.swift */; };
 		D0F71DB12C494AC50031B320 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F71DB02C494AC50031B320 /* Character.swift */; };
 		D0F71DB32C494D4D0031B320 /* IdentifiableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F71DB22C494D4D0031B320 /* IdentifiableError.swift */; };
+		D0F71DB92C4A692E0031B320 /* CardDetailsContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F71DB82C4A692E0031B320 /* CardDetailsContent.swift */; };
 		D0F917DE2C47EC8A00D47245 /* IBMPlexSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0F917DD2C47EC8A00D47245 /* IBMPlexSans-Medium.ttf */; };
 		D0F917E02C47ECA800D47245 /* IBMPlexSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0F917DF2C47ECA800D47245 /* IBMPlexSans-Bold.ttf */; };
 		D0F917E22C47ECCD00D47245 /* IBMPlexSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0F917E12C47ECCD00D47245 /* IBMPlexSans-SemiBold.ttf */; };
@@ -44,6 +45,7 @@
 		D0F71DAC2C494A360031B320 /* CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
 		D0F71DB02C494AC50031B320 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		D0F71DB22C494D4D0031B320 /* IdentifiableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableError.swift; sourceTree = "<group>"; };
+		D0F71DB82C4A692E0031B320 /* CardDetailsContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsContent.swift; sourceTree = "<group>"; };
 		D0F917DA2C47E94900D47245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0F917DD2C47EC8A00D47245 /* IBMPlexSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Medium.ttf"; sourceTree = "<group>"; };
 		D0F917DF2C47ECA800D47245 /* IBMPlexSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -105,9 +107,9 @@
 		D0F71D9E2C492E130031B320 /* characters */ = {
 			isa = PBXGroup;
 			children = (
-				D009952B2C480526002277C4 /* CharactersViewModel.swift */,
 				D035432C2C4552C900B7B3EB /* CharactersView.swift */,
 				D035433A2C4581A900B7B3EB /* CharacterListItem.swift */,
+				D009952B2C480526002277C4 /* CharactersViewModel.swift */,
 			);
 			path = characters;
 			sourceTree = "<group>";
@@ -117,6 +119,7 @@
 			children = (
 				D03543382C456E5800B7B3EB /* CharacterDetailsView.swift */,
 				D0F71DA72C493B780031B320 /* CharacterDetailsViewModel.swift */,
+				D0F71DB82C4A692E0031B320 /* CardDetailsContent.swift */,
 			);
 			path = character_details;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				D0F71DB32C494D4D0031B320 /* IdentifiableError.swift in Sources */,
 				D009952C2C480526002277C4 /* CharactersViewModel.swift in Sources */,
 				D0F71DAD2C494A360031B320 /* CharacterRepository.swift in Sources */,
+				D0F71DB92C4A692E0031B320 /* CardDetailsContent.swift in Sources */,
 				D0F917E62C47F0F300D47245 /* CharactersAPIResponse.swift in Sources */,
 				D0F71DA82C493B780031B320 /* CharacterDetailsViewModel.swift in Sources */,
 				D035433B2C4581A900B7B3EB /* CharacterListItem.swift in Sources */,

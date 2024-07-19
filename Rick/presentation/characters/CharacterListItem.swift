@@ -59,6 +59,7 @@ struct CharacterListItem: View {
             }
             .frame(width: 353, height: 96)
             .cornerRadius(24)
+            
         }
     }
     

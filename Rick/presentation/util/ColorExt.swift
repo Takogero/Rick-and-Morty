@@ -1,4 +1,5 @@
 import UIKit
+import SwiftUI
 
 extension UIColor {
     convenience init(hexString: String) {
@@ -19,3 +20,25 @@ extension UIColor {
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
 }
+
+func buttonColor(character: Character) -> Color {
+        switch character.status.lowercased() {
+        case "alive":
+            return Color(UIColor(hexString: "#198737"))
+        case "dead":
+            return Color(UIColor(hexString: "#D62300"))
+        default:
+            return Color(UIColor(hexString: "#686874"))
+        }
+    }
+
+    func buttonText(character: Character) -> String {
+        switch character.status.lowercased() {
+        case "alive":
+            return "Alive"
+        case "dead":
+            return "Dead"
+        default:
+            return "Unknown"
+        }
+    }
