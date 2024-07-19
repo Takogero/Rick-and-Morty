@@ -11,6 +11,7 @@ struct CharactersView: View {
                     Text("Rick & Morty Characters")
                         .foregroundColor(.white)
                         .font(Font.custom("IBMPlexSans-Bold", size: 24))
+                        .padding(.top, -20)
 
                     LazyVGrid(columns: columns, spacing: 5) {
                         ForEach(viewModel.characters) { character in

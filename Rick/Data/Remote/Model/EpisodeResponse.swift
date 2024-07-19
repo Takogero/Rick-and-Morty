@@ -3,7 +3,7 @@ import Foundation
 struct EpisodeResponse: Codable {
     let id: Int
     let name: String
-    let airDate: String?  // Make this property optional
+    let airDate: String?  
     let episode: String
     let characters: [String]
     let url: String
@@ -12,7 +12,7 @@ struct EpisodeResponse: Codable {
     enum CodingKeys: String, CodingKey {
         case id
         case name
-        case airDate = "air_date"  // Map to the actual key in the JSON
+        case airDate = "air_date"
         case episode
         case characters
         case url
