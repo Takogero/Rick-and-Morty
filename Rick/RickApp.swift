@@ -11,7 +11,7 @@ import SwiftUI
 struct RickApp: App {
     var body: some Scene {
         WindowGroup {
-            CharactersView()
+            SplashView()
         }
     }
 }
