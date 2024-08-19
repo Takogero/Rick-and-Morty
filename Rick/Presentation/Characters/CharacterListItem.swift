@@ -67,9 +67,4 @@ struct CharacterListItem: View {
         }
     }
 }
-//
-//#Preview {
-//    NavigationView {
-//        CharacterListItem()
-//    }
-//}
+
